@@ -1,5 +1,6 @@
 package com.example.timer
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Handler
@@ -74,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private fun formatTime(milliseconds: Long): String {
         val ms = milliseconds % 1000 / 10
         val s = (milliseconds / 1000) % 60
